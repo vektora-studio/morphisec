@@ -1,0 +1,554 @@
+/* ===================================
+Global CSS
+====================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Color */
+:root {
+  --black: #000;
+  --black-secondary: rgba(0, 0, 0, 0.5);
+  --brand-primary: #ffc727;
+  --brand-secondary: rgba(255, 197, 39, 0.2);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  line-height: 30px;
+  color: var(--black);
+  font-weight: 400;
+}
+
+.section {
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.col-2, .col-3 {
+  display: grid;
+}
+
+.col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.align-center {
+  align-items: center;
+}
+
+.decor {
+  position: absolute;
+}
+
+.iconify {
+  font-size: 2em;
+}
+
+.section, footer, .hero, .navbar {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+/* Typography */
+
+h1 {
+    font-weight: 600;
+    font-size: 2.25em;
+    line-height: 50px;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.text {
+    color: var(--black-secondary);
+    margin: 10px 0 40px 0;
+}
+
+.title-tag {
+    padding: 9px 20px;
+    background-color: var(--brand-secondary);
+    display: inline-block;
+    border-radius: 50px;
+    color: var(--brand-primary);
+    margin: 20px 0;
+}
+
+.btn-wrap {
+  display: inline-block;
+}
+
+.top-center {
+  text-align: center;
+}
+
+/* Button */
+
+button {
+  outline: none;
+  border: none;
+}
+
+.btn {
+  border-radius: 10px;
+  font-size: 0.875em;
+  line-height: 21px;
+}
+
+.btn-primary {
+    background-color: var(--brand-primary);
+    padding: 14px 50px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: var(--black);
+    border: 1px solid var(--brand-primary);
+    transition: .3s ease;
+}
+
+.btn-primary:hover, .btn-primary-rounded:hover {
+  background-color: transparent;
+}
+
+.btn-primary-rounded {
+    background-color: var(--brand-primary);
+    padding: 9px 35px;
+    border-radius: 50px;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--brand-primary);
+    transition: .3s ease;
+}
+
+
+.btn-secondary {
+  background: var(--black);
+  padding: 7px 20px;
+  color: white;
+  border: 1px solid var(--black);
+  transition: .3s ease;
+}
+
+.btn-secondary:hover {
+  background: transparent;
+  color: var(--black);
+}
+
+
+/* ===================================
+    Navbar
+====================================== */
+
+
+.navbar {
+  /* background-color: var(--primary); */
+  padding: 20px 5%;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+
+.nav-colored {
+  background-color: white;
+  box-shadow: 5px -1px 12px -5px grey;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-link {
+  color: var(--black);
+  font-size: 0.875em;
+  line-height: 21px;
+  transition: .3s ease;
+}
+
+.nav-link:hover {
+  color: var(--brand-primary);
+}
+
+.active {
+  color: var(--brand-primary);
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #000;
+}
+
+
+/* ===================================
+    Hero
+====================================== */
+
+.hero {
+    background-image: url('../images/bh-hero.png');
+    background-position: top right;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 140px 5%;
+}
+
+.hero-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 140px; */
+}
+
+.hero-left {
+    max-width: 500px;
+}
+
+.hero-right img {
+    position: absolute;
+    right: 0;
+    /* margin-right: -12%; */
+}
+
+/* ===================================
+    Counters
+====================================== */
+
+.counter-data-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px ;
+}
+
+.counter-box {
+  display: flex;
+  align-items: center;
+}
+
+.icon-box {
+  background-color: var(--brand-secondary);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.icon-box .iconify {
+  font-size: 2em;
+  background: transparent;
+}
+
+.counters {
+  /* width: 330px;
+  max-width: min-content; */
+}
+
+.counter {
+  font-weight: 700;
+  font-size: 3.75em;
+  line-height: 90px;
+  letter-spacing: 1px;
+}
+
+.counter-box span {
+  color: var(--black-secondary);
+}
+
+/* ===================================
+    Optimize
+====================================== */
+
+.optimize-right {
+  max-width: 500px;
+}
+/* ===================================
+    Drill
+====================================== */
+
+.drill {
+  background: var(--brand-secondary);
+  padding: 5% 0;
+}
+
+.title {
+  width: 720px;
+  max-width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+.drill-wrap {
+  gap: 40px;
+}
+
+.drill .icon-box {
+  background-color: var(--brand-primary);
+}
+
+.drill-card {
+  background-color: white;
+  border-top-right-radius: 30%;
+  padding: 50px 40px;
+}
+
+/* ===================================
+    Organizations
+====================================== */
+
+.organizations-wrap {
+  text-align: center;
+}
+
+.org-brands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  align-items: center;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+
+/* ===================================
+Protect
+====================================== */
+
+.protect-wrap {
+  gap: 45px;
+  margin-top: 80px;
+}
+
+.right-top {
+  right: 0;
+  top: 0;
+}
+
+.protect-card {
+  background: var(--brand-secondary);
+  border-top-right-radius: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 90px 40px;
+  overflow: hidden;
+}
+
+.icon-block {
+  background-color: var(--brand-primary);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  margin-bottom: 40px;
+}
+
+
+/* ===================================
+    What's Happening
+====================================== */
+
+.wh-grid {
+  margin-top: 60px;
+  gap: 70px;
+}
+
+.wh-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.wh-title {
+  display: flex;
+  font-weight: 600;
+  font-size: 1.25em;
+  line-height: 24px;
+  align-items: center;
+}
+
+.wh-title span {
+  max-width: 120px;
+}
+
+/* ===================================
+    Footer
+====================================== */
+
+footer {
+  margin-top: 100px;
+  background: #141003;
+  color: white;
+  padding: 5% 0;
+  border-top-right-radius: 15%;
+  position: relative;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.subscribe p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe input {
+  padding: 16px 30px;
+  border-radius: 10px;
+  border: none;
+  min-width: 380px;
+  margin-right: 20px;
+}
+
+.footer-wrap {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding-top: 60px;
+  margin-top: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 50px;
+}
+
+.footer-menu ul {
+  margin-top: 40px;
+}
+
+.footer-link {
+  font-size: .875em;
+  line-height: 21px;
+  margin-bottom: 20px;
+}
+
+.footer-link a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 10px;
+}
+
+footer .iconify {
+  color: white;
+}
+
+.socmed-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right {
+  right: 0;
+  bottom: 0;
+}
+
+.left {
+  left: 0;
+  top: 0;
+}
